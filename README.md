@@ -21,7 +21,7 @@
 
 ## Live Demo
 
-[To Do List](https://gabyse1.github.io/to-do-list/dist/)
+[To Do List](https://gabyse1.github.io/todolist-code-review/dist/)
 
 
 ## Getting Started
