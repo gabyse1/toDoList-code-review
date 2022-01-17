@@ -2,6 +2,9 @@ import './style.css';
 import * as CRUD from './crud.js';
 import setStatus from './status.js';
 
+const taskForm = document.querySelector('#task__form');
+const taskInput = document.querySelector('#task__input');
+const removeButton = document.querySelector('#btn__clear-done-tasks');
 const taskList = document.querySelector('#task__list');
 let toDoListArray = [];
 
@@ -113,10 +116,6 @@ const renderTaskList = () => {
 };
 
 // CRUD TASKS
-const taskForm = document.querySelector('#task__form');
-const taskInput = document.querySelector('#task__input');
-const removeButton = document.querySelector('#btn__clear-done-tasks');
-
 const submitTask = () => {
   CRUD.addTask(toDoListArray, taskInput.value);
   taskInput.value = '';
