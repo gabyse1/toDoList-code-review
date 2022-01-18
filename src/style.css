@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Andika New Basic", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+  letter-spacing: 0;
+  color: #272a31;
+  font-style: normal;
+  background-image: url('./background-list.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.body__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 37.5rem;
+  height: 80%;
+  margin: auto;
+  background: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem !important;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: left;
+}
+
+input[type=text],
+textarea,
+button {
+  width: 100%;
+  font-family: "Andika New Basic", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #272a31;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+input[type=text] {
+  height: 3rem;
+  padding: 0 2.5rem 0 1rem;
+  line-height: 3rem;
+  font-style: italic;
+}
+
+textarea {
+  height: 3.25rem;
+  padding: 1rem 0;
+  overflow: hidden;
+  resize: none;
+  cursor: default;
+}
+
+input[type=text]:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__task-checklist {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+.btn__task-dragdrop,
+.btn__task-remove {
+  width: 100%;
+  padding: 0;
+  cursor: move;
+}
+
+.btn__task-remove {
+  cursor: pointer;
+}
+
+button svg {
+  fill: rgb(161, 161, 161);
+}
+
+.btn__task-checklist svg {
+  display: none;
+  height: 100%;
+  fill: #86c555;
+}
+
+.checklist-active {
+  border: none;
+}
+
+.checklist-active svg {
+  display: block;
+}
+
+.btn__task-dragdrop svg,
+.btn__task-remove svg {
+  height: 1rem;
+}
+
+.btn__task-remove svg {
+  fill: #ef3c7b;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:hover svg {
+  fill: #08b9ae;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.body__container > * {
+  width: 100%;
+  text-align: center;
+}
+
+.body__item,
+.task__list > * {
+  position: relative;
+}
+
+.body__item::after,
+.task__list > *::after {
+  display: table;
+  content: '';
+  width: 100%;
+  height: 0.5px;
+  background-color: #134da2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+#task__submit,
+#btn__resync-old-tasks {
+  width: 2.5rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#task__submit svg {
+  width: 50%;
+}
+
+#btn__resync-old-tasks svg {
+  width: 1rem;
+  fill: #fff;
+}
+
+#btn__resync-old-tasks:hover svg {
+  fill: #08b9ae;
+}
+
+.list-item-view {
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+.list-item-view:focus-within {
+  background-color: rgba(255, 255, 0, 0.25);
+}
+
+.list-item-check,
+.list-item-tools {
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.list-item-check {
+  left: 0;
+}
+
+.list-item-tools {
+  right: 0;
+}
+
+#btn__clear-done-tasks {
+  height: 3rem;
+  padding: 0.5rem 2.5rem;
+  background-color: rgba(19, 77, 162, 0.25);
+  color: #134da2;
+}
+
+.task__header {
+  background-color: #134da2;
+  color: #fff;
+  position: relative;
+}
+
+.d-none {
+  display: none;
+}
+
+.txt-active {
+  background-color: rgb(235, 235, 106);
+}
